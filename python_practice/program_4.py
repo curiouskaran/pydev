@@ -9,7 +9,7 @@ For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)"""
 print("enter a number"),
 num = int(raw_input('-->'))
 
-for y in xrange(2,num+1):
-    if( num % y == 0):
-        print'%d is a divisor of %d'%(y,num)
+for divisor in xrange(2,num+1):
+    if( num % divisor == 0):
+        print'%d is a divisor of %d'%(divisor,num)
     y = y + 1
