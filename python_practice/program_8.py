@@ -31,7 +31,7 @@ while (status == True):
         status = int(raw_input('-->'))
     else:
         print'it is an error please only enter valid input'
-        print'press any number key to continue or else enter 0 to terminate',
+        print'press any number key to continue(1-9) or else enter 0 to terminate',
         status = int(raw_input('-->'))
 
 
