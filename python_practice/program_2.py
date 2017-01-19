@@ -1,6 +1,7 @@
-#python practice - program_2.py
+# python practice - program_2.py
 
-"""Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
+"""Ask the user for a number. Depending on whether the number is even or odd,
+print out an appropriate message to the user.
 If the number is a multiple of 4, print out a different message."""
 
 print 'enter a number',
