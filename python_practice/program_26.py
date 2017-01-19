@@ -29,31 +29,25 @@ Dont worry about checking whether someone won the game, but if a player tries to
 another piece, do not allow the piece to go there.'''
 
 import sys
+from pandas import *
 
 #intial game state
-game = [[None, None, None],
-    [None, None, None],
-    [None, None, None]]
-
-def draw_board(gameboard):
-    print'enter the size of grid for tic-tac-toe',
-    size = int(raw_input('-->'))
-
-    for i in xrange(0,size):
-        print' ---' * (size)
-        print'{} {}'.format('|','  ')*(size +1)
-
-    print' ---' * (size)
+game = [[0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]]
 
 #checking and reflecting user input on screen
 print'By default player1 uses X and player2 uses O'
+
+
 def enter_move():
     turn = 0
     moves = 0
-    x = None
-    y = None
+    x = 0
+    y = 0
 
     while(moves != 9):
+        print DataFrame(game)
         if turn == 0:
             print'enter your move player1(in form of (x,y) coordinates starting form (0,0) to (2,2)) eg-1,2',
             inp = [int(x) for x in raw_input('-->').split(",")]
@@ -65,11 +59,11 @@ def enter_move():
             x = inp[0]
             y = inp[1]
         try:
-            if(turn == 0 and game[x][y] == None):
+            if(turn == 0 and game[x][y] == 0):
                 game[x][y] = 'X'
                 moves += 1
                 turn =1
-            elif(turn == 1 and game[x][y] == None):
+            elif(turn == 1 and game[x][y] == 0):
                 game[x][y] = 'O'
                 moves += 1
                 turn = 0
@@ -77,7 +71,7 @@ def enter_move():
                 print'exiting game due to invalid move'
                 sys.exit(0)
             print'current game scenario is'
-            print draw_board(game)
+
         except IndexError:
             print're-enter input as IndexError occured opps!!'
         except ValueError:

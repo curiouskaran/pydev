@@ -26,9 +26,10 @@ row_cells = int(total_cells**0.5)
 # calculate rows
 matrix = [nn_matrix[i:i+row_cells] for i in range(0, total_cells, row_cells)]
 
+
 def check_grid(grid):
     #rows
-    for x in xrange(0,3):
+    for x in xrange(0,2):
         row = set([grid[0][x],grid[1][x],grid[2][x]])
         if len(row) == 1 and grid[x][0] != 0:
             return grid[x][0]
@@ -39,13 +40,15 @@ def check_grid(grid):
             return grid[0][x]
     #diagonals
     diag1 = set([grid[0][0],grid[1][1],grid[2][2]])
-    diag2 = set([grid[0][2],grid[1][1],grid[3][0]])
+    diag2 = set([grid[0][2],grid[1][1],grid[2][0]])
     if len(diag1) == 1 or len(diag2) == 1 and grid[1][1] != 0:
         return grid[1][1]
 
     return 0
-'''matrix = [[2, 2, 0],
-    [2, 1, 0],
-    [2, 1, 1]]'''
+
+
+'''matrix = [['x', 'x', 'x'],
+         ['x', 'y', 'y'],
+         ['y', 'y', 'x']]'''
 print check_grid(matrix)
 
