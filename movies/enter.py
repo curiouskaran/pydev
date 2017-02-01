@@ -20,7 +20,7 @@ beautiful_mind = media.Movie("A Beautiful Mind",
 							"https://youtu.be/WFJgUm7iOKw")
 
 school_of_rock = media.Movie("School Of Rock",
-							"A unsucessful rock band mussiacian turned into a teacher",
+							"A unsucessful rock band musiacian turned into a teacher",
 							"https://upload.wikimedia.org/wikipedia/en/1/11/School_of_Rock_Poster.jpg",
 							"https://youtu.be/3PsUJFEBC74")
 
