@@ -1,0 +1,17 @@
+img{
+    max-width: 100%;
+}
+
+.title{
+    padding-top: 50px;
+    font-family: 'Lato', sans-serif;
+    text-align: -webkit-right;
+    font-weight: 100;
+    font-size: 3.5em;
+}
+
+.sub{
+    font-family: 'Lato', sans-serif;
+    text-align: -webkit-right;
+    font-weight: bolder;
+    font-size: larger;
